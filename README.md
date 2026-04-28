@@ -6,3 +6,5 @@
 
 
                                              Just a password manager
+
+                                             With Vexor Security you have security
