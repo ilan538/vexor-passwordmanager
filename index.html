@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keeper - Minimal Password Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Keeper</h1>
+
+    <section class="auth">
+      <input id="master" type="password" placeholder="Master password" />
+      <button id="newVaultBtn">Create new vault</button>
+      <button id="openVaultBtn">Load vault</button>
+      <button id="unlockBtn">Unlock</button>
+      <button id="lockBtn" disabled>Lock</button>
+      <button id="saveVaultBtn" disabled>Save vault</button>
+      <span id="status"></span>
+    </section>
+
+    <section id="manager" style="display:none">
+      <form id="entryForm">
+        <input id="site" placeholder="Site / app" required />
+        <input id="username" placeholder="Username / email" />
+        <input id="password" placeholder="Password" />
+        <input id="note" placeholder="Notes" />
+        <button type="submit">Save</button>
+      </form>
+
+      <input id="search" placeholder="Search..." />
+
+      <ul id="list"></ul>
+    </section>
+
+    <footer>
+      <small>Offline demo — client-side encryption (AES-GCM + PBKDF2).</small>
+    </footer>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
